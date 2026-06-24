@@ -50,12 +50,34 @@
                       "spec": {
                         "editorMode": "code",
                         "expr": "hass_sensor_temperature_celsius{entity=\"sensor.e3_vitodens_100_0421_temperature_exterieure\"}",
-                        "legendFormat": "température extérieure",
+                        "legendFormat": "Temp extérieure",
                         "range": true
                       },
                       "version": "v0"
                     },
                     "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "hass_climate_current_temperature_celsius{entity=\"climate.e3_vitodens_100_0421_chauffage\"}",
+                        "instant": false,
+                        "legendFormat": "Temp courrante RDC",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "E"
                   }
                 },
                 {
@@ -236,7 +258,20 @@
         ]
       }
     },
-    "links": [],
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/vdupain/grafana-dashboards/blob/main/temprature.json"
+      }
+    ],
     "liveNow": false,
     "preferences": {
       "layout": {
