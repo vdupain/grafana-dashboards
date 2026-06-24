@@ -72,7 +72,7 @@
                         "editorMode": "code",
                         "expr": "hass_climate_current_temperature_celsius{entity=\"climate.e3_vitodens_100_0421_chauffage\"}",
                         "instant": false,
-                        "legendFormat": "Temp courrante RDC",
+                        "legendFormat": "Temp RDC",
                         "range": true
                       },
                       "version": "v0"
@@ -92,7 +92,7 @@
                       "kind": "DataQuery",
                       "spec": {
                         "editorMode": "code",
-                        "expr": "node_hwmon_temp_celsius{instance=\"192.168.10.2:9100\"}",
+                        "expr": "node_hwmon_temp_celsius{instance=\"192.168.10.2:9100\", chip=\"thermal_thermal_zone0\"}",
                         "instant": false,
                         "legendFormat": "AP openwrt / {{chip}}",
                         "range": true
@@ -114,7 +114,7 @@
                       "kind": "DataQuery",
                       "spec": {
                         "editorMode": "code",
-                        "expr": "node_hwmon_temp_celsius{instance=\"192.168.10.254:9100\"}",
+                        "expr": "node_hwmon_temp_celsius{instance=\"192.168.10.254:9100\", chip=\"thermal_thermal_zone0\"}",
                         "instant": false,
                         "legendFormat": "repeater openwrt / {{chip}}",
                         "range": true
