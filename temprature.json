@@ -138,12 +138,34 @@
                         "editorMode": "code",
                         "expr": "node_cpu_temperature_celsius{job=\"opnsense\",cpu=\"0\"}",
                         "instant": false,
-                        "legendFormat": "routeur opnsense",
+                        "legendFormat": "routeur opnsense / cpu",
                         "range": true
                       },
                       "version": "v0"
                     },
                     "refId": "C"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "max by (instance) (node_hwmon_temp_celsius{chip=\"platform_coretemp_0\", instance=~\"pve.*\"})",
+                        "instant": false,
+                        "legendFormat": "{{instance}} / cpu",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "F"
                   }
                 }
               ],
