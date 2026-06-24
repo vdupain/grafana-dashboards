@@ -328,7 +328,6 @@
                     "mode": "continuous-GrYlRd"
                   },
                   "fieldMinMax": false,
-                  "max": 50,
                   "thresholds": {
                     "mode": "absolute",
                     "steps": [
@@ -741,7 +740,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-15m",
+      "from": "now-3h",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
