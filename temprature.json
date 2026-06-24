@@ -365,6 +365,286 @@
             "version": "13.0.2"
           }
         }
+      },
+      "panel-5": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "# The nicest possible display of a metric...\r\nnode_hwmon_temp_celsius{instance=~\"$instance\"} \r\n  * on(instance,chip,sensor) group_left(label) node_hwmon_sensor_label \r\n  * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n# ...but it may filter out metrics that do not have a label, so as a fallback use the machine sensor name\r\n  or on(instance,chip,sensor) label_replace(node_hwmon_temp_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\") \r\n    * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n  or on(instance,chip,sensor) label_replace(label_replace(node_hwmon_temp_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\"), \"chip_name\", \"$0\", \"chip\", \".*\")",
+                        "legendFormat": "{{chip_name}}/{{label}}",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "node_hwmon_temp_crit_alarm_celsius{instance=~\"$instance\"}\r\n  * on(instance,chip,sensor) group_left(label) node_hwmon_sensor_label \r\n  * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n  or label_replace(node_hwmon_temp_crit_alarm_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\") \r\n    * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n    unless on(instance,chip,sensor) node_hwmon_sensor_label",
+                        "instant": false,
+                        "legendFormat": "Critical Alarm {{ chip_name }}/{{ label }}",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "B"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "node_hwmon_temp_crit_celsius{instance=~\"$instance\"}\r\n  * on(instance,chip,sensor) group_left(label) node_hwmon_sensor_label \r\n  * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n  or label_replace(node_hwmon_temp_crit_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\") \r\n    * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n    unless on(instance,chip,sensor) node_hwmon_sensor_label",
+                        "instant": false,
+                        "legendFormat": "Critical  {{ chip_name }}/{{ label }}",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "C"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "node_hwmon_temp_crit_hyst_celsius{instance=~\"$instance\"}\r\n  * on(instance,chip,sensor) group_left(label) node_hwmon_sensor_label \r\n  * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n  or label_replace(node_hwmon_temp_crit_hyst_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\") \r\n    * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n    unless on(instance,chip,sensor) node_hwmon_sensor_label",
+                        "instant": false,
+                        "legendFormat": "Critical Hysteresis  {{ chip_name }}/{{ label }}",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "D"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "node_hwmon_temp_max_celsius{instance=~\"$instance\"}\r\n  * on(instance,chip,sensor) group_left(label) node_hwmon_sensor_label \r\n  * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n  or label_replace(node_hwmon_temp_max_celsius{instance=~\"$instance\"}, \"label\", \"$0\", \"sensor\", \".*\") \r\n    * on(instance,chip) group_left(chip_name) node_hwmon_chip_names\r\n    unless on(instance,chip,sensor) node_hwmon_sensor_label",
+                        "instant": false,
+                        "legendFormat": "Max  {{ chip_name }}/{{ label }}",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "E"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 5,
+          "links": [],
+          "title": "$instance",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "showValues": false,
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "celsius"
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byRegexp",
+                      "options": "/Critical*./",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "color",
+                        "value": {
+                          "fixedColor": "red",
+                          "mode": "fixed"
+                        }
+                      },
+                      {
+                        "id": "custom.lineStyle",
+                        "value": {
+                          "dash": [
+                            10,
+                            10
+                          ],
+                          "fill": "dash"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byRegexp",
+                      "options": "/Max*./",
+                      "scope": "series"
+                    },
+                    "properties": [
+                      {
+                        "id": "color",
+                        "value": {
+                          "fixedColor": "orange",
+                          "mode": "fixed"
+                        }
+                      },
+                      {
+                        "id": "custom.lineStyle",
+                        "value": {
+                          "dash": [
+                            10,
+                            10
+                          ],
+                          "fill": "dash"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byValue",
+                      "options": {
+                        "op": "gte",
+                        "reducer": "allIsNull",
+                        "value": 0
+                      }
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.hideFrom",
+                        "value": {
+                          "legend": true,
+                          "tooltip": true,
+                          "viz": false
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              "options": {
+                "annotations": {
+                  "clustering": -1,
+                  "multiLane": false
+                },
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "table",
+                  "placement": "right",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "multi",
+                  "sort": "none"
+                }
+              }
+            },
+            "version": "13.0.2"
+          }
+        }
       }
     },
     "layout": {
@@ -395,6 +675,25 @@
               "width": 9,
               "x": 15,
               "y": 0
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-5"
+              },
+              "height": 10,
+              "repeat": {
+                "direction": "h",
+                "maxPerRow": 2,
+                "mode": "variable",
+                "value": "instance"
+              },
+              "width": 24,
+              "x": 0,
+              "y": 14
             }
           }
         ]
@@ -440,12 +739,62 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-6h",
+      "from": "now-15m",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
     },
     "title": "Température",
-    "variables": []
+    "variables": [
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": [
+              "pve1:9100",
+              "pve2:9100",
+              "pve3:9100",
+              "pve4:9100",
+              "192.168.10.254:9100",
+              "192.168.10.2:9100"
+            ],
+            "value": [
+              "pve1:9100",
+              "pve2:9100",
+              "pve3:9100",
+              "pve4:9100",
+              "192.168.10.254:9100",
+              "192.168.10.2:9100"
+            ]
+          },
+          "definition": "label_values(node_uname_info,instance)",
+          "hide": "dontHide",
+          "includeAll": true,
+          "label": "instance",
+          "multi": true,
+          "name": "instance",
+          "options": [],
+          "query": {
+            "datasource": {
+              "name": "bfptkyuoaiakgb"
+            },
+            "group": "prometheus",
+            "kind": "DataQuery",
+            "spec": {
+              "qryType": 1,
+              "query": "label_values(node_uname_info,instance)",
+              "refId": "PrometheusVariableQueryEditor-VariableQuery"
+            },
+            "version": "v0"
+          },
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "regexApplyTo": "value",
+          "skipUrlSync": false,
+          "sort": "disabled"
+        }
+      }
+    ]
   }
 }
