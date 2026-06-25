@@ -740,7 +740,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-3h",
+      "from": "now-5m",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
@@ -753,22 +753,18 @@
           "allowCustomValue": true,
           "current": {
             "text": [
-              "192.168.10.254:9100",
-              "192.168.10.2:9100",
-              "pve0:9100",
-              "pve1:9100",
+              "repeater:9100",
               "pve2:9100",
-              "pve3:9100",
-              "pve4:9100"
+              "pve1:9100",
+              "pve0:9100",
+              "openwrt:9100"
             ],
             "value": [
-              "192.168.10.254:9100",
-              "192.168.10.2:9100",
-              "pve0:9100",
-              "pve1:9100",
+              "repeater:9100",
               "pve2:9100",
-              "pve3:9100",
-              "pve4:9100"
+              "pve1:9100",
+              "pve0:9100",
+              "openwrt:9100"
             ]
           },
           "definition": "label_values(node_uname_info,instance)",
