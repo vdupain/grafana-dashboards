@@ -2,42 +2,26 @@
   "apiVersion": "dashboard.grafana.app/v2",
   "kind": "Dashboard",
   "metadata": {
-    "name": "scaphandre",
-    "namespace": "default",
-    "uid": "9cd7f107-043e-4e06-8945-c6f1ec51d699",
-    "resourceVersion": "1782108384663011",
-    "generation": 1,
-    "creationTimestamp": "2026-06-22T06:06:24Z",
-    "labels": {
-      "grafana.app/deprecatedInternalID": "59"
-    },
-    "annotations": {
-      "grafana.app/createdBy": "user:efptjqo40lrswa",
-      "grafana.app/folder": "",
-      "grafana.app/saved-from-ui": "Grafana v13.0.2 (3fcdbc5a)"
-    }
+    "name": "scaphandre"
   },
   "spec": {
     "annotations": [
       {
         "kind": "AnnotationQuery",
         "spec": {
-          "query": {
-            "kind": "DataQuery",
-            "group": "datasource",
-            "version": "v0",
-            "datasource": {
-              "name": "grafana"
-            },
-            "spec": {}
-          },
+          "builtIn": true,
           "enable": true,
           "hide": true,
           "iconColor": "rgba(0, 211, 255, 1)",
-          "name": "Annotations & Alerts",
-          "builtIn": true,
-          "legacyOptions": {
-            "type": "dashboard"
+          "name": "Annotations \u0026 Alerts",
+          "query": {
+            "datasource": {
+              "name": "grafana"
+            },
+            "group": "grafana",
+            "kind": "DataQuery",
+            "spec": {},
+            "version": "v0"
           }
         }
       }
@@ -49,23 +33,26 @@
       "panel-16": {
         "kind": "Panel",
         "spec": {
-          "id": 16,
-          "title": "Welcome!",
-          "description": "",
-          "links": [],
           "data": {
             "kind": "QueryGroup",
             "spec": {
               "queries": [],
-              "transformations": [],
-              "queryOptions": {}
+              "queryOptions": {},
+              "transformations": []
             }
           },
+          "description": "",
+          "id": 16,
+          "links": [],
+          "title": "Welcome!",
           "vizConfig": {
-            "kind": "VizConfig",
             "group": "text",
-            "version": "11.5.1",
+            "kind": "VizConfig",
             "spec": {
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              },
               "options": {
                 "code": {
                   "language": "plaintext",
@@ -74,22 +61,15 @@
                 },
                 "content": "# Proxmox Energy Usage\n\nPower consumption metrics for Promox clusters using Scaphandre. https://github.com/hubblo-org/scaphandre",
                 "mode": "markdown"
-              },
-              "fieldConfig": {
-                "defaults": {},
-                "overrides": []
               }
-            }
+            },
+            "version": "13.0.2"
           }
         }
       },
       "panel-18": {
         "kind": "Panel",
         "spec": {
-          "id": 18,
-          "title": "Power Usage",
-          "description": "",
-          "links": [],
           "data": {
             "kind": "QueryGroup",
             "spec": {
@@ -97,35 +77,60 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
+                    "hidden": false,
                     "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
                       "datasource": {
                         "name": "prometheus"
                       },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
                       "spec": {
                         "editorMode": "code",
                         "expr": "scaph_host_power_microwatts{instance=~\"$pve_node\"} / 1000000",
                         "instant": false,
-                        "legendFormat": "{{job}}",
+                        "legendFormat": "{{pve_node}}",
                         "range": true
-                      }
+                      },
+                      "version": "v0"
                     },
-                    "refId": "A",
-                    "hidden": false
+                    "refId": "A"
                   }
                 }
               ],
-              "transformations": [],
-              "queryOptions": {}
+              "queryOptions": {},
+              "transformations": []
             }
           },
+          "description": "",
+          "id": 18,
+          "links": [],
+          "title": "Power Usage",
           "vizConfig": {
-            "kind": "VizConfig",
             "group": "stat",
-            "version": "11.5.1",
+            "kind": "VizConfig",
             "spec": {
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "watt"
+                },
+                "overrides": []
+              },
               "options": {
                 "colorMode": "value",
                 "graphMode": "area",
@@ -142,40 +147,15 @@
                 "showPercentChange": false,
                 "textMode": "auto",
                 "wideLayout": true
-              },
-              "fieldConfig": {
-                "defaults": {
-                  "unit": "watt",
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": null,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
-                  "color": {
-                    "mode": "thresholds"
-                  }
-                },
-                "overrides": []
               }
-            }
+            },
+            "version": "13.0.2"
           }
         }
       },
       "panel-19": {
         "kind": "Panel",
         "spec": {
-          "id": 19,
-          "title": "Processes using > 0.01W",
-          "description": "",
-          "links": [],
           "data": {
             "kind": "QueryGroup",
             "spec": {
@@ -183,64 +163,40 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
+                    "hidden": false,
                     "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
                       "datasource": {
                         "name": "prometheus"
                       },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
                       "spec": {
                         "editorMode": "code",
-                        "expr": "scaph_process_power_consumption_microwatts{instance=~\"$pve_node\"} / 1000000 > 0.01",
+                        "expr": "scaph_process_power_consumption_microwatts{instance=~\"$pve_node\"} / 1000000 \u003e 0.01",
                         "instant": false,
                         "legendFormat": "{{exe}}",
                         "range": true
-                      }
+                      },
+                      "version": "v0"
                     },
-                    "refId": "A",
-                    "hidden": false
+                    "refId": "A"
                   }
                 }
               ],
-              "transformations": [],
-              "queryOptions": {}
+              "queryOptions": {},
+              "transformations": []
             }
           },
+          "description": "",
+          "id": 19,
+          "links": [],
+          "title": "Processes using \u003e 0.01W",
           "vizConfig": {
-            "kind": "VizConfig",
             "group": "timeseries",
-            "version": "11.5.1",
+            "kind": "VizConfig",
             "spec": {
-              "options": {
-                "legend": {
-                  "calcs": [],
-                  "displayMode": "list",
-                  "placement": "bottom",
-                  "showLegend": true
-                },
-                "tooltip": {
-                  "hideZeros": false,
-                  "mode": "single",
-                  "sort": "none"
-                }
-              },
               "fieldConfig": {
                 "defaults": {
-                  "unit": "watt",
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": null,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
                   "color": {
                     "mode": "palette-classic"
                   },
@@ -268,6 +224,7 @@
                       "type": "linear"
                     },
                     "showPoints": "auto",
+                    "showValues": false,
                     "spanNulls": false,
                     "stacking": {
                       "group": "A",
@@ -276,60 +233,29 @@
                     "thresholdsStyle": {
                       "mode": "off"
                     }
-                  }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "watt"
                 },
                 "overrides": []
-              }
-            }
-          }
-        }
-      },
-      "panel-2": {
-        "kind": "Panel",
-        "spec": {
-          "id": 2,
-          "title": "Hosts",
-          "description": "",
-          "links": [],
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
-                      "spec": {
-                        "disableTextWrap": false,
-                        "editorMode": "code",
-                        "expr": "scaph_host_power_microwatts{instance=~\"$pve_node\"} / 1000000",
-                        "fullMetaSearch": false,
-                        "includeNullMetadata": true,
-                        "interval": "",
-                        "legendFormat": "{{ job}}",
-                        "range": true,
-                        "useBackend": false
-                      }
-                    },
-                    "refId": "A",
-                    "hidden": false
-                  }
-                }
-              ],
-              "transformations": [],
-              "queryOptions": {}
-            }
-          },
-          "vizConfig": {
-            "kind": "VizConfig",
-            "group": "timeseries",
-            "version": "11.5.1",
-            "spec": {
+              },
               "options": {
-                "alertThreshold": true,
+                "annotations": {
+                  "clustering": -1,
+                  "multiLane": false
+                },
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
@@ -338,26 +264,60 @@
                 },
                 "tooltip": {
                   "hideZeros": false,
-                  "mode": "multi",
+                  "mode": "single",
                   "sort": "none"
                 }
-              },
+              }
+            },
+            "version": "13.0.2"
+          }
+        }
+      },
+      "panel-2": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "disableTextWrap": false,
+                        "editorMode": "code",
+                        "expr": "scaph_host_power_microwatts{instance=~\"$pve_node\"} / 1000000",
+                        "fullMetaSearch": false,
+                        "includeNullMetadata": true,
+                        "interval": "",
+                        "legendFormat": "{{ pve_node}}",
+                        "range": true,
+                        "useBackend": false
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 2,
+          "links": [],
+          "title": "Hosts",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
               "fieldConfig": {
                 "defaults": {
-                  "unit": "watt",
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": null,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
                   "color": {
                     "mode": "palette-classic"
                   },
@@ -385,6 +345,7 @@
                       "type": "linear"
                     },
                     "showPoints": "never",
+                    "showValues": false,
                     "spanNulls": false,
                     "stacking": {
                       "group": "A",
@@ -393,58 +354,30 @@
                     "thresholdsStyle": {
                       "mode": "off"
                     }
-                  }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "watt"
                 },
                 "overrides": []
-              }
-            }
-          }
-        }
-      },
-      "panel-21": {
-        "kind": "Panel",
-        "spec": {
-          "id": 21,
-          "title": "Scaphandre",
-          "description": "",
-          "links": [],
-          "data": {
-            "kind": "QueryGroup",
-            "spec": {
-              "queries": [
-                {
-                  "kind": "PanelQuery",
-                  "spec": {
-                    "query": {
-                      "kind": "DataQuery",
-                      "group": "prometheus",
-                      "version": "v0",
-                      "datasource": {
-                        "name": "prometheus"
-                      },
-                      "spec": {
-                        "editorMode": "code",
-                        "expr": "scaph_process_power_consumption_microwatts{exe=\"/usr/bin/scaphandre\", instance=~\"$pve_node\"} / 1000000",
-                        "instant": false,
-                        "legendFormat": "{{job}}",
-                        "range": true
-                      }
-                    },
-                    "refId": "A",
-                    "hidden": false
-                  }
-                }
-              ],
-              "transformations": [],
-              "queryOptions": {}
-            }
-          },
-          "vizConfig": {
-            "kind": "VizConfig",
-            "group": "timeseries",
-            "version": "11.5.1",
-            "spec": {
+              },
               "options": {
+                "alertThreshold": true,
+                "annotations": {
+                  "clustering": -1,
+                  "multiLane": false
+                },
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
@@ -453,26 +386,59 @@
                 },
                 "tooltip": {
                   "hideZeros": false,
-                  "mode": "single",
+                  "mode": "multi",
                   "sort": "none"
                 }
-              },
+              }
+            },
+            "version": "13.0.2"
+          }
+        }
+      },
+      "panel-21": {
+        "kind": "Panel",
+        "spec": {
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "prometheus"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "scaph_process_power_consumption_microwatts{exe=\"/usr/bin/scaphandre\", instance=~\"$pve_node\"} / 1000000",
+                        "instant": false,
+                        "legendFormat": "__auto",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "A"
+                  }
+                }
+              ],
+              "queryOptions": {},
+              "transformations": []
+            }
+          },
+          "description": "",
+          "id": 21,
+          "links": [],
+          "title": "Scaphandre",
+          "vizConfig": {
+            "group": "timeseries",
+            "kind": "VizConfig",
+            "spec": {
               "fieldConfig": {
                 "defaults": {
-                  "unit": "watt",
-                  "thresholds": {
-                    "mode": "absolute",
-                    "steps": [
-                      {
-                        "value": null,
-                        "color": "green"
-                      },
-                      {
-                        "value": 80,
-                        "color": "red"
-                      }
-                    ]
-                  },
                   "color": {
                     "mode": "palette-classic"
                   },
@@ -500,6 +466,7 @@
                       "type": "linear"
                     },
                     "showPoints": "auto",
+                    "showValues": false,
                     "spanNulls": false,
                     "stacking": {
                       "group": "A",
@@ -508,11 +475,43 @@
                     "thresholdsStyle": {
                       "mode": "off"
                     }
-                  }
+                  },
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": 0
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  },
+                  "unit": "watt"
                 },
                 "overrides": []
+              },
+              "options": {
+                "annotations": {
+                  "clustering": -1,
+                  "multiLane": false
+                },
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                }
               }
-            }
+            },
+            "version": "13.0.2"
           }
         }
       }
@@ -524,78 +523,89 @@
           {
             "kind": "GridLayoutItem",
             "spec": {
-              "x": 0,
-              "y": 0,
-              "width": 12,
-              "height": 7,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-18"
-              }
+              },
+              "height": 7,
+              "width": 12,
+              "x": 0,
+              "y": 0
             }
           },
           {
             "kind": "GridLayoutItem",
             "spec": {
-              "x": 12,
-              "y": 0,
-              "width": 12,
-              "height": 7,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-16"
-              }
+              },
+              "height": 7,
+              "width": 12,
+              "x": 12,
+              "y": 0
             }
           },
           {
             "kind": "GridLayoutItem",
             "spec": {
-              "x": 0,
-              "y": 7,
-              "width": 12,
-              "height": 9,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-2"
-              }
+              },
+              "height": 9,
+              "width": 12,
+              "x": 0,
+              "y": 7
             }
           },
           {
             "kind": "GridLayoutItem",
             "spec": {
-              "x": 12,
-              "y": 7,
-              "width": 12,
-              "height": 9,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-21"
-              }
+              },
+              "height": 9,
+              "width": 12,
+              "x": 12,
+              "y": 7
             }
           },
           {
             "kind": "GridLayoutItem",
             "spec": {
-              "x": 0,
-              "y": 16,
-              "width": 12,
-              "height": 8,
               "element": {
                 "kind": "ElementReference",
                 "name": "panel-19"
-              }
+              },
+              "height": 8,
+              "width": 12,
+              "x": 0,
+              "y": 16
             }
           }
         ]
       }
     },
-    "links": [],
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/vdupain/grafana-dashboards/blob/main/infrastructure/scaphandre.json"
+      }
+    ],
     "liveNow": false,
     "preload": false,
     "tags": [],
     "timeSettings": {
-      "from": "now-30m",
-      "to": "now",
       "autoRefresh": "",
       "autoRefreshIntervals": [
         "5s",
@@ -609,69 +619,73 @@
         "2h",
         "1d"
       ],
+      "fiscalYearStartMonth": 0,
+      "from": "now-30m",
       "hideTimepicker": false,
-      "fiscalYearStartMonth": 0
+      "timezone": "browser",
+      "to": "now"
     },
     "title": "Proxmox power usage using Scaphandre",
     "variables": [
       {
         "kind": "DatasourceVariable",
         "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "prometheus",
+            "value": "bfptkyuoaiakgb"
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "multi": false,
           "name": "datasource",
+          "options": [],
           "pluginId": "prometheus",
           "refresh": "onDashboardLoad",
           "regex": "",
-          "current": {
-            "text": "Prometheus",
-            "value": "prometheus"
-          },
-          "options": [],
-          "multi": false,
-          "includeAll": false,
-          "hide": "dontHide",
-          "skipUrlSync": false,
-          "allowCustomValue": true
+          "skipUrlSync": false
         }
       },
       {
         "kind": "QueryVariable",
         "spec": {
-          "name": "pve_node",
+          "allowCustomValue": true,
           "current": {
             "text": [
-              "10.60.128.200:9997",
-              "10.60.128.200:9998",
-              "10.60.128.200:9999"
+              "pve0:9898",
+              "pve1:9898",
+              "pve2:9898"
             ],
             "value": [
-              "10.60.128.200:9997",
-              "10.60.128.200:9998",
-              "10.60.128.200:9999"
+              "pve0:9898",
+              "pve1:9898",
+              "pve2:9898"
             ]
           },
+          "definition": "label_values(scaph_host_power_microwatts,instance)",
           "hide": "dontHide",
-          "refresh": "onDashboardLoad",
-          "skipUrlSync": false,
+          "includeAll": true,
+          "multi": true,
+          "name": "pve_node",
+          "options": [],
           "query": {
-            "kind": "DataQuery",
-            "group": "prometheus",
-            "version": "v0",
             "datasource": {
               "name": "prometheus"
             },
+            "group": "prometheus",
+            "kind": "DataQuery",
             "spec": {
               "qryType": 1,
               "query": "label_values(scaph_host_power_microwatts,instance)",
               "refId": "PrometheusVariableQueryEditor-VariableQuery"
-            }
+            },
+            "version": "v0"
           },
+          "refresh": "onDashboardLoad",
           "regex": "",
-          "sort": "disabled",
-          "definition": "label_values(scaph_host_power_microwatts,instance)",
-          "options": [],
-          "multi": true,
-          "includeAll": true,
-          "allowCustomValue": true
+          "regexApplyTo": "value",
+          "skipUrlSync": false,
+          "sort": "disabled"
         }
       }
     ]
