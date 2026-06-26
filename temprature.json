@@ -464,7 +464,7 @@
                 {
                   "kind": "PanelQuery",
                   "spec": {
-                    "hidden": false,
+                    "hidden": true,
                     "query": {
                       "datasource": {
                         "name": "bfptkyuoaiakgb"
@@ -757,14 +757,18 @@
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
-              "repeater:9100"
+              "repeater:9100",
+              "pve3:9100",
+              "pve4:9100"
             ],
             "value": [
               "openwrt:9100",
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
-              "repeater:9100"
+              "repeater:9100",
+              "pve3:9100",
+              "pve4:9100"
             ]
           },
           "definition": "label_values(node_uname_info,instance)",
