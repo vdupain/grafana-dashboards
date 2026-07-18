@@ -167,6 +167,50 @@
                     },
                     "refId": "F"
                   }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "mtxrGaugeValue{job=\"snmp_mikrotik_system\",instance=\"192.168.10.5\"}",
+                        "instant": false,
+                        "legendFormat": "switch mikrotik / cpu",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "G"
+                  }
+                },
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "hidden": false,
+                    "query": {
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
+                      "kind": "DataQuery",
+                      "spec": {
+                        "editorMode": "code",
+                        "expr": "avg(node_cpu_temperature_celsius{job=\"opnsense\"})",
+                        "instant": false,
+                        "legendFormat": "routeur opnsense / cpu avg",
+                        "range": true
+                      },
+                      "version": "v0"
+                    },
+                    "refId": "H"
+                  }
                 }
               ],
               "queryOptions": {},
@@ -740,7 +784,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-2d",
+      "from": "now-6h",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
