@@ -113,7 +113,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -150,7 +150,7 @@
                 "mode": "markdown"
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -237,7 +237,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -324,7 +324,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -421,7 +421,7 @@
                 "textMode": "auto"
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -437,7 +437,10 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
                         "expr": "mtxrOpticalTemperature{job=\"snmp_mikrotik_system\",instance=\"192.168.10.5\"}",
@@ -508,7 +511,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -524,11 +527,16 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "rate(ifInOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\"Port.*\"}[$__rate_interval]) * 8",
-                        "legendFormat": "{{ifDescr}} IN"
+                        "editorMode": "code",
+                        "expr": "rate(ifInOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\".*\"}[$__rate_interval]) * 8",
+                        "legendFormat": "{{ifDescr}} IN",
+                        "range": true
                       },
                       "version": "v0"
                     },
@@ -612,6 +620,8 @@
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
+                  "enableFacetedFilter": false,
+                  "overflow": "ellipsis",
                   "placement": "bottom",
                   "showLegend": true
                 },
@@ -622,7 +632,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -638,11 +648,16 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "rate(ifOutOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\"Port.*\"}[$__rate_interval]) * 8",
-                        "legendFormat": "{{ifDescr}} OUT"
+                        "editorMode": "code",
+                        "expr": "rate(ifOutOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\".*\"}[$__rate_interval]) * 8",
+                        "legendFormat": "{{ifDescr}} OUT",
+                        "range": true
                       },
                       "version": "v0"
                     },
@@ -726,6 +741,8 @@
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
+                  "enableFacetedFilter": false,
+                  "overflow": "ellipsis",
                   "placement": "bottom",
                   "showLegend": true
                 },
@@ -736,7 +753,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -752,11 +769,16 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "ifOperStatus{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\"Port.*\"}",
-                        "legendFormat": "{{ifDescr}}"
+                        "editorMode": "code",
+                        "expr": "ifOperStatus{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\".*\"}",
+                        "legendFormat": "{{ifDescr}}",
+                        "range": true
                       },
                       "version": "v0"
                     },
@@ -835,7 +857,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -851,11 +873,16 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
-                        "expr": "sum(rate(ifInOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\"Port.*\"}[$__rate_interval])) * 8",
-                        "legendFormat": "Total IN"
+                        "editorMode": "code",
+                        "expr": "sum(rate(ifInOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\".*\"}[$__rate_interval])) * 8",
+                        "legendFormat": "Total IN",
+                        "range": true
                       },
                       "version": "v0"
                     },
@@ -867,7 +894,10 @@
                   "spec": {
                     "hidden": false,
                     "query": {
-                      "group": "",
+                      "datasource": {
+                        "name": "bfptkyuoaiakgb"
+                      },
+                      "group": "prometheus",
                       "kind": "DataQuery",
                       "spec": {
                         "expr": "sum(rate(ifOutOctets{job=\"snmp_mikrotik_if\",instance=\"192.168.10.5\",ifDescr=~\"Port.*\"}[$__rate_interval])) * 8",
@@ -955,6 +985,8 @@
                 "legend": {
                   "calcs": [],
                   "displayMode": "list",
+                  "enableFacetedFilter": false,
+                  "overflow": "ellipsis",
                   "placement": "bottom",
                   "showLegend": true
                 },
@@ -965,7 +997,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       }
@@ -1107,7 +1139,20 @@
         ]
       }
     },
-    "links": [],
+    "links": [
+      {
+        "asDropdown": false,
+        "icon": "external link",
+        "includeVars": false,
+        "keepTime": false,
+        "tags": [],
+        "targetBlank": true,
+        "title": "Source (GitHub)",
+        "tooltip": "View source file in repository",
+        "type": "link",
+        "url": "https://github.com/vdupain/grafana-dashboards/blob/main/infrastructure/css6108g2s-switch.json"
+      }
+    ],
     "liveNow": false,
     "preload": false,
     "tags": [],
@@ -1126,7 +1171,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-6h",
+      "from": "now-3h",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
