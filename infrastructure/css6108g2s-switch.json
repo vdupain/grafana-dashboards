@@ -438,7 +438,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -528,7 +528,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -649,7 +649,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -770,7 +770,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -874,7 +874,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -895,7 +895,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1177,6 +1177,27 @@
       "to": "now"
     },
     "title": "CSS610-8G-2S+ Switch",
-    "variables": []
+    "variables": [
+      {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "skipUrlSync": false
+        }
+      }
+    ]
   }
 }

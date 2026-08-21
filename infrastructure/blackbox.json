@@ -61,7 +61,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "probe_success{job=~\"$job\", instance=~\"$instance\"}",
@@ -83,7 +83,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "probe_http_ssl{job=~\"$job\", instance=~\"$instance\"} > 0",
@@ -105,7 +105,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(probe_ssl_earliest_cert_expiry{job=~\"$job\", instance=~\"$instance\"} - time()) / 3600 / 24",
@@ -127,7 +127,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "probe_http_status_code{job=~\"$job\", instance=~\"$instance\"} > 0",
@@ -149,7 +149,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "avg_over_time(probe_duration_seconds{job=~\"$job\", instance=~\"$instance\"}[1m])",
@@ -172,7 +172,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "probe_tls_version_info{job=~\"$job\", instance=~\"$instance\"}",
@@ -194,7 +194,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "avg_over_time(probe_dns_lookup_time_seconds{job=~\"$job\", instance=~\"$instance\"}[1m])",
@@ -741,7 +741,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "sum(probe_http_duration_seconds{job=~\"$job\", instance=~\"$instance\"}) by (instance)",
@@ -866,7 +866,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "probe_http_duration_seconds{job=~\"$job\", instance=~\"$instance\"}",
@@ -1077,6 +1077,26 @@
     "title": "Blackbox Exporter (HTTP prober)",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "skipUrlSync": false
+        }
+      },
+      {
         "kind": "QueryVariable",
         "spec": {
           "name": "job",
@@ -1093,7 +1113,7 @@
             "group": "prometheus",
             "version": "v0",
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "spec": {
               "qryType": 1,
@@ -1129,7 +1149,7 @@
             "group": "prometheus",
             "version": "v0",
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "spec": {
               "qryType": 1,

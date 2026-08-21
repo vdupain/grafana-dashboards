@@ -72,7 +72,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "exemplar": true,
@@ -179,7 +179,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "((rate(pve_disk_write_bytes{instance=\"$instance\"}[5m]) + rate(pve_disk_read_bytes[5m])) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
@@ -296,7 +296,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(rate(pve_network_receive_bytes{instance=\"$instance\"}[5m]) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
@@ -318,7 +318,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(rate(pve_network_transmit_bytes{instance=\"$instance\"}[5m])* on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
@@ -457,7 +457,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -575,7 +575,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -600,7 +600,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -624,7 +624,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -648,7 +648,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -672,7 +672,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -696,7 +696,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -720,7 +720,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1099,7 +1099,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "((pve_cpu_usage_ratio{instance=\"$instance\"} / pve_cpu_usage_limit) * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
@@ -1226,7 +1226,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1250,7 +1250,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1274,7 +1274,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1418,7 +1418,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1519,7 +1519,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1540,7 +1540,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1682,7 +1682,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1703,7 +1703,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -1846,7 +1846,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "(pve_memory_usage_bytes{instance=\"$instance\"} / pve_memory_size_bytes * on(id, instance) group_left(name, type) pve_guest_info) and on(id, instance) pve_up == 1",
@@ -1973,7 +1973,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "pve_cpu_usage_ratio{instance=\"$instance\"} / pve_cpu_usage_limit and on(id) pve_node_info",
@@ -2090,7 +2090,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "expr": "pve_memory_usage_bytes{instance=\"$instance\"} / pve_memory_size_bytes and on(id) pve_node_info",
@@ -2207,7 +2207,7 @@
                       "group": "prometheus",
                       "version": "v0",
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "spec": {
                         "editorMode": "code",
@@ -2539,6 +2539,26 @@
     "title": "Proxmox via Prometheus",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "skipUrlSync": false
+        }
+      },
+      {
         "kind": "QueryVariable",
         "spec": {
           "name": "instance",
@@ -2554,7 +2574,7 @@
             "group": "prometheus",
             "version": "v0",
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "spec": {
               "query": "label_values(pve_node_info, instance)",

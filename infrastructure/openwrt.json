@@ -40,7 +40,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -62,7 +62,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -116,7 +116,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -138,7 +138,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -160,7 +160,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -214,7 +214,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -236,7 +236,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -290,7 +290,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -344,7 +344,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -366,7 +366,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -420,7 +420,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -442,7 +442,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -496,7 +496,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -518,7 +518,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -572,7 +572,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -594,7 +594,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -648,7 +648,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -742,7 +742,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -764,7 +764,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -818,7 +818,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -840,7 +840,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -894,7 +894,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -916,7 +916,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -970,7 +970,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -992,7 +992,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1046,7 +1046,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1100,7 +1100,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1154,7 +1154,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1208,7 +1208,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1303,7 +1303,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1404,7 +1404,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1505,7 +1505,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1625,7 +1625,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1679,7 +1679,7 @@
                     "hidden": true,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1700,7 +1700,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1791,7 +1791,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1845,7 +1845,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -1940,7 +1940,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2040,7 +2040,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2062,7 +2062,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2084,7 +2084,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2106,7 +2106,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2160,7 +2160,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2261,7 +2261,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2361,7 +2361,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2460,7 +2460,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2514,7 +2514,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2568,7 +2568,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2590,7 +2590,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2612,7 +2612,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2634,7 +2634,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2656,7 +2656,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2678,7 +2678,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2700,7 +2700,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2722,7 +2722,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2744,7 +2744,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2864,7 +2864,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2886,7 +2886,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -2940,7 +2940,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3061,7 +3061,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3114,7 +3114,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3167,7 +3167,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3220,7 +3220,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3273,7 +3273,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3326,7 +3326,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3379,7 +3379,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3502,7 +3502,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3621,7 +3621,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3674,7 +3674,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3727,7 +3727,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3780,7 +3780,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3803,7 +3803,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3825,7 +3825,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3847,7 +3847,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3869,7 +3869,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3891,7 +3891,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3913,7 +3913,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3935,7 +3935,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -3957,7 +3957,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4077,7 +4077,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4200,7 +4200,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4319,7 +4319,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4341,7 +4341,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4646,7 +4646,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4739,7 +4739,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4790,7 +4790,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4892,7 +4892,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -4987,7 +4987,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5082,7 +5082,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5194,7 +5194,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5304,7 +5304,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5357,7 +5357,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5477,7 +5477,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5499,7 +5499,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5804,7 +5804,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5826,7 +5826,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5880,7 +5880,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5902,7 +5902,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5924,7 +5924,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -5978,7 +5978,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6000,7 +6000,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6022,7 +6022,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6076,7 +6076,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6171,7 +6171,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6193,7 +6193,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6215,7 +6215,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6237,7 +6237,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6259,7 +6259,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6281,7 +6281,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6401,7 +6401,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6423,7 +6423,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6445,7 +6445,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6467,7 +6467,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6489,7 +6489,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6609,7 +6609,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -6631,7 +6631,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "bfptkyuoaiakgb"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -7690,6 +7690,26 @@
     "title": "OpenWRT",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "",
+            "value": ""
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "skipUrlSync": false
+        }
+      },
+      {
         "kind": "QueryVariable",
         "spec": {
           "allowCustomValue": true,
@@ -7706,7 +7726,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",
@@ -7741,7 +7761,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",
@@ -7776,7 +7796,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",
@@ -7811,7 +7831,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",

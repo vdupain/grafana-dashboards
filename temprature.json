@@ -799,10 +799,10 @@
         "kind": "DatasourceVariable",
         "spec": {
           "allowCustomValue": true,
-          "current": {
-            "text": "prometheus",
-            "value": "bfptkyuoaiakgb"
-          },
+"current": {
+              "text": "",
+              "value": ""
+            },
           "hide": "dontHide",
           "includeAll": false,
           "label": "",

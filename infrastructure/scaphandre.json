@@ -80,7 +80,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "prometheus"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -166,7 +166,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "prometheus"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -408,7 +408,7 @@
                     "hidden": false,
                     "query": {
                       "datasource": {
-                        "name": "prometheus"
+                        "name": "${datasource}"
                       },
                       "group": "prometheus",
                       "kind": "DataQuery",
@@ -631,10 +631,10 @@
         "kind": "DatasourceVariable",
         "spec": {
           "allowCustomValue": true,
-          "current": {
-            "text": "prometheus",
-            "value": "bfptkyuoaiakgb"
-          },
+"current": {
+              "text": "",
+              "value": ""
+            },
           "hide": "dontHide",
           "includeAll": false,
           "multi": false,
@@ -670,7 +670,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "prometheus"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",
