@@ -289,6 +289,8 @@
                 "legend": {
                   "calcs": [],
                   "displayMode": "table",
+                  "enableFacetedFilter": false,
+                  "overflow": "ellipsis",
                   "placement": "right",
                   "showLegend": true
                 },
@@ -299,7 +301,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -407,7 +409,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       },
@@ -677,6 +679,8 @@
                 "legend": {
                   "calcs": [],
                   "displayMode": "table",
+                  "enableFacetedFilter": false,
+                  "overflow": "ellipsis",
                   "placement": "right",
                   "showLegend": true
                 },
@@ -687,7 +691,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.1.1"
           }
         }
       }
@@ -792,12 +796,31 @@
     "title": "Température",
     "variables": [
       {
+        "kind": "DatasourceVariable",
+        "spec": {
+          "allowCustomValue": true,
+          "current": {
+            "text": "prometheus",
+            "value": "bfptkyuoaiakgb"
+          },
+          "hide": "dontHide",
+          "includeAll": false,
+          "label": "",
+          "multi": false,
+          "name": "datasource",
+          "options": [],
+          "pluginId": "prometheus",
+          "refresh": "onDashboardLoad",
+          "regex": "",
+          "skipUrlSync": false
+        }
+      },
+      {
         "kind": "QueryVariable",
         "spec": {
           "allowCustomValue": true,
           "current": {
             "text": [
-              "openwrt:9100",
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
@@ -806,7 +829,6 @@
               "pve4:9100"
             ],
             "value": [
-              "openwrt:9100",
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
@@ -824,7 +846,7 @@
           "options": [],
           "query": {
             "datasource": {
-              "name": "bfptkyuoaiakgb"
+              "name": "${datasource}"
             },
             "group": "prometheus",
             "kind": "DataQuery",
