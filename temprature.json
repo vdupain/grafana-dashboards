@@ -27,7 +27,6 @@
       }
     ],
     "cursorSync": "Off",
-    "description": "",
     "editable": true,
     "elements": {
       "panel-3": {
@@ -301,7 +300,7 @@
                 }
               }
             },
-            "version": "13.1.1"
+            "version": "13.2.0"
           }
         }
       },
@@ -409,7 +408,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.1.1"
+            "version": "13.2.0"
           }
         }
       },
@@ -691,7 +690,7 @@
                 }
               }
             },
-            "version": "13.1.1"
+            "version": "13.2.0"
           }
         }
       }
@@ -748,20 +747,7 @@
         ]
       }
     },
-    "links": [
-      {
-        "asDropdown": false,
-        "icon": "external link",
-        "includeVars": false,
-        "keepTime": false,
-        "tags": [],
-        "targetBlank": true,
-        "title": "Source (GitHub)",
-        "tooltip": "View source file in repository",
-        "type": "link",
-        "url": "https://github.com/vdupain/grafana-dashboards/blob/main/temprature.json"
-      }
-    ],
+    "links": [],
     "liveNow": false,
     "preferences": {
       "layout": {
@@ -799,10 +785,10 @@
         "kind": "DatasourceVariable",
         "spec": {
           "allowCustomValue": true,
-"current": {
-              "text": "",
-              "value": ""
-            },
+          "current": {
+            "text": "Prometheus",
+            "value": "PBFA97CFB590B2093"
+          },
           "hide": "dontHide",
           "includeAll": false,
           "label": "",
@@ -824,17 +810,21 @@
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
-              "repeater:9100",
               "pve3:9100",
-              "pve4:9100"
+              "pve5:9100",
+              "repeater:9100",
+              "opnsense:9100",
+              "ap:9100"
             ],
             "value": [
               "pve0:9100",
               "pve1:9100",
               "pve2:9100",
-              "repeater:9100",
               "pve3:9100",
-              "pve4:9100"
+              "pve5:9100",
+              "repeater:9100",
+              "opnsense:9100",
+              "ap:9100"
             ]
           },
           "definition": "label_values(node_uname_info,instance)",
