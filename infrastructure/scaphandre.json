@@ -63,7 +63,7 @@
                 "mode": "markdown"
               }
             },
-            "version": "13.0.2"
+            "version": "13.2.0"
           }
         }
       },
@@ -149,7 +149,7 @@
                 "wideLayout": true
               }
             },
-            "version": "13.0.2"
+            "version": "13.2.0"
           }
         }
       },
@@ -269,7 +269,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.2.0"
           }
         }
       },
@@ -391,7 +391,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.2.0"
           }
         }
       },
@@ -511,7 +511,7 @@
                 }
               }
             },
-            "version": "13.0.2"
+            "version": "13.2.0"
           }
         }
       }
@@ -588,20 +588,7 @@
         ]
       }
     },
-    "links": [
-      {
-        "asDropdown": false,
-        "icon": "external link",
-        "includeVars": false,
-        "keepTime": false,
-        "tags": [],
-        "targetBlank": true,
-        "title": "Source (GitHub)",
-        "tooltip": "View source file in repository",
-        "type": "link",
-        "url": "https://github.com/vdupain/grafana-dashboards/blob/main/infrastructure/scaphandre.json"
-      }
-    ],
+    "links": [],
     "liveNow": false,
     "preload": false,
     "tags": [],
@@ -631,10 +618,10 @@
         "kind": "DatasourceVariable",
         "spec": {
           "allowCustomValue": true,
-"current": {
-              "text": "",
-              "value": ""
-            },
+          "current": {
+            "text": "Prometheus",
+            "value": "PBFA97CFB590B2093"
+          },
           "hide": "dontHide",
           "includeAll": false,
           "multi": false,
@@ -654,12 +641,14 @@
             "text": [
               "pve0:9898",
               "pve1:9898",
-              "pve2:9898"
+              "pve2:9898",
+              "pve5:9898"
             ],
             "value": [
               "pve0:9898",
               "pve1:9898",
-              "pve2:9898"
+              "pve2:9898",
+              "pve5:9898"
             ]
           },
           "definition": "label_values(scaph_host_power_microwatts,instance)",
